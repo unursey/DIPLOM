@@ -4,8 +4,9 @@ const modal = () => {
   const btn = document.querySelector(".callback-btn.fancyboxModal.hidden-xs");
   const modalCallback = document.querySelector(".modal-callback");
   const modalOverlay = document.querySelector(".modal-overlay");
+  const btnServices = document.querySelector(".button-services");
 
-  btn.addEventListener("click", (e) => {
+  const modalOpen = function (e) {
     e.preventDefault();
     modalCallback.style.display = "block";
     modalOverlay.style.display = "block";
@@ -23,7 +24,7 @@ const modal = () => {
     } else {
       modalCallback.style.left = "50%";
     }
-  });
+  };
 
   document.body.addEventListener("click", (e) => {
     if (
@@ -34,6 +35,9 @@ const modal = () => {
       modalCallback.style.display = "none";
     }
   });
+
+  btn.addEventListener("click", modalOpen);
+  btnServices.addEventListener("click", modalOpen);
 };
 
 export { modal };
