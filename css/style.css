@@ -847,6 +847,11 @@ hr.white {
 }
 
 /* top slider */
+
+.top-slider .item.active {
+  display: block !important;
+}
+
 .top-slider .slick-dots {
   position: absolute;
   bottom: 25px;
@@ -865,6 +870,7 @@ hr.white {
   overflow: hidden;
   height: 450px;
   position: relative;
+  display: none;
 }
 .top-slider .item:before {
   content: "";
@@ -879,6 +885,9 @@ hr.white {
 .top-slider .table {
   position: relative;
   z-index: 10;
+}
+.top-slider .slick-dots {
+  z-index: 20;
 }
 .video-block {
   height: 100%;

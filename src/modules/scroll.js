@@ -21,9 +21,6 @@ const scroll = () => {
     const contentHeight = document.documentElement.scrollTop;
     const pageBegin = block.getBoundingClientRect().top;
 
-    console.log(contentHeight);
-    console.log(pageBegin);
-
     if (Math.abs(pageBegin) <= contentHeight) {
       up.style.display = "block";
     } else {
