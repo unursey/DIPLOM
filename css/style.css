@@ -4,6 +4,9 @@
 @import url(jquery.fancybox.css);
 @import url(lightgallery.min.css);
 @import url(settings.css);
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 16px;
   line-height: 1.6;
@@ -1027,9 +1030,9 @@ video#video_background {
 .accordeon .element.active .title:before {
   background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-/*.accordeon > div:first-of-type .element-content {
-	display: block;
-} */
+.accordeon > div:first-of-type .element-content {
+  display: block;
+}
 .accordeon .element .title:hover:before {
   background-color: #333;
 }
