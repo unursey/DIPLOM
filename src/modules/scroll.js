@@ -17,15 +17,20 @@ const scroll = () => {
   });
 
   const showUp = function () {
-    const contentHeight = document.documentElement.clientHeight;
-    const pageBegin = document.documentElement.getBoundingClientRect().top;
+    const block = document.getElementById("services");
+    const contentHeight = document.documentElement.scrollTop;
+    const pageBegin = block.getBoundingClientRect().top;
 
-    if (Math.abs(pageBegin) >= contentHeight) {
+    console.log(contentHeight);
+    console.log(pageBegin);
+
+    if (Math.abs(pageBegin) <= contentHeight) {
       up.style.display = "block";
     } else {
       up.style.display = "none";
     }
   };
+
   up.addEventListener("click", () => window.scroll(0, 0));
   window.addEventListener("scroll", showUp);
 };
