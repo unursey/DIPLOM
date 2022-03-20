@@ -5,9 +5,9 @@ const modal = () => {
   const modalCallback = document.querySelector(".modal-callback");
   const modalOverlay = document.querySelector(".modal-overlay");
   const btnServices = document.querySelector(".button-services");
+  const row = document.querySelector(".services-elements .row");
 
-  const modalOpen = function (e) {
-    e.preventDefault();
+  const modalOpen = function () {
     modalCallback.style.display = "block";
     modalOverlay.style.display = "block";
     let width = document.documentElement.clientWidth;
@@ -36,8 +36,19 @@ const modal = () => {
     }
   });
 
-  btn.addEventListener("click", modalOpen);
-  btnServices.addEventListener("click", modalOpen);
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modalOpen();
+  });
+  btnServices.addEventListener("click", (e) => {
+    e.preventDefault();
+    modalOpen();
+  });
+  row.addEventListener("click", (e) => {
+    if (e.target.matches(".img-wrapper")) {
+      modalOpen();
+    }
+  });
 };
 
 export { modal };

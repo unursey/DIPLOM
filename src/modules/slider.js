@@ -3,7 +3,6 @@ const slider = () => {
   const slides = document.querySelectorAll(".top-slider .item");
   const tables = document.querySelectorAll(".table");
   const dots = document.querySelectorAll(".dot");
-  console.log(tables);
 
   let currentSlide = 0;
   let interval;

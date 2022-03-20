@@ -7,7 +7,6 @@
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
     "start": "webpack serve --mode=development --open"
-
   },
   "repository": {
     "type": "git",
@@ -15,8 +14,6 @@
   },
   "author": "",
   "license": "ISC",
-
-  
   "bugs": {
     "url": "https://github.com/unursey/3DGlo/issues"
   },
@@ -25,5 +22,8 @@
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "swiper": "^8.0.7"
   }
 }

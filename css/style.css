@@ -1144,6 +1144,7 @@ video#video_background {
   opacity: 1;
 }
 .services-section .element .img-wrapper:before {
+  cursor: pointer;
   content: "Оформить заявку";
   display: block;
   position: absolute;
