@@ -31,7 +31,10 @@ const scroll = () => {
 
   up.addEventListener("click", () => window.scroll(0, 0));
   window.addEventListener("scroll", showUp);
-  logo.addEventListener("click", () => (window.location.href = "index.html"));
+  logo.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scroll(0, 0);
+  });
 };
 
 export { scroll };
