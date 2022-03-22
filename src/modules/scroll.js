@@ -1,6 +1,7 @@
 const scroll = () => {
   const links = document.querySelectorAll(".top-menu a");
   const up = document.querySelector(".up");
+  const logo = document.querySelector(".logo");
 
   links.forEach((element) => {
     element.addEventListener("click", (e) => {
@@ -30,6 +31,7 @@ const scroll = () => {
 
   up.addEventListener("click", () => window.scroll(0, 0));
   window.addEventListener("scroll", showUp);
+  logo.addEventListener("click", () => (window.location.href = "index.html"));
 };
 
 export { scroll };

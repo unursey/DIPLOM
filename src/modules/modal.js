@@ -13,7 +13,7 @@ const modal = () => {
     let width = document.documentElement.clientWidth;
     if (width > 768) {
       animate({
-        duration: 1200,
+        duration: 600,
         timing(timeFraction) {
           return Math.pow(timeFraction, 1);
         },
